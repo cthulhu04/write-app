@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:write_app/config/config.dart';
 import 'package:write_app/widgets/social_media_button.dart';
 import 'package:write_app/widgets/text_form_field.dart';
 
@@ -75,6 +76,7 @@ class SignUpForm extends StatelessWidget {
               _nameTextEditingController!.clear();
               _emailTextEditingController!.clear();
               _passwordTextEditingController!.clear();
+              Navigator.of(context).pushNamed(Config.user);
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 12.0),
