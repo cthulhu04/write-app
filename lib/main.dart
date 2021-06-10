@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Write app',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: generateRoute,
-      initialRoute: Config.user,
+      initialRoute: Config.register,
     );
   }
 }
