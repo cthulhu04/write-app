@@ -21,16 +21,19 @@ class _DocumentContainerState extends State<DocumentContainer> {
     return GestureDetector(
       onTap: () => widget.onPressFunction(),
       onLongPress: () => widget.longPressFunction(),
-      child: Container(
-        alignment: Alignment.center,
-        color: Colors.white,
-        child: Text(
-          widget.title,
-          overflow: TextOverflow.ellipsis,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 28.0,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12.0),
+        child: Container(
+          alignment: Alignment.center,
+          color: Colors.white,
+          child: Text(
+            widget.title,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 28.0,
+            ),
           ),
         ),
       ),

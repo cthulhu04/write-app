@@ -6,18 +6,21 @@ class NothingContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      color: setTitle ? Colors.white24 : Colors.white12,
-      child: setTitle
-          ? Text(
-              'nothing',
-              style: TextStyle(
-                fontSize: 18.0,
-                color: Colors.white,
-              ),
-            )
-          : null,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(12.0),
+      child: Container(
+        alignment: Alignment.center,
+        color: setTitle ? Colors.white24 : Colors.white12,
+        child: setTitle
+            ? Text(
+                'nothing',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.white,
+                ),
+              )
+            : null,
+      ),
     );
   }
 }
